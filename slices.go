@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func mainkllm() {
 
 	styles := make([]string, 3, 10)
 	fmt.Printf("Len: %d, cap: %d", len(styles), cap(styles))
