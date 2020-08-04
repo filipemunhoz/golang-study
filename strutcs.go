@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func main() {
+func mainkms() {
 
 	_, err := os.Open("//tmp//file.txt")
 
