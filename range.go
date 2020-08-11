@@ -4,12 +4,24 @@ import (
 	"fmt"
 )
 
-func mainwt() {
+func main() {
 
-	styles := []string{"Rock", "Country", "Blues"}
+	styles := []string{"Rock", "Country", "Blues", "Jazz"}
 
-	for _, i := range styles {
-		fmt.Println("Style:", i)
+	printStyles(styles)
+}
+
+func printStyles(styles []string) {
+
+	for i := range styles {
+		fmt.Println("Style:", styles[i])
 	}
 
+	for i, style := range styles {
+		fmt.Printf("Style: %v at index %v\n", style, i)
+	}
+
+	for _, style := range styles {
+		fmt.Printf("Style: %v\n", style)
+	}
 }

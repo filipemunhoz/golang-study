@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main() {
+func mainjuh() {
 
 	var waitGroup sync.WaitGroup
 	waitGroup.Add(2)
