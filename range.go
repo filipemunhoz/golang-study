@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func maind() {
 
 	styles := []string{"Rock", "Country", "Blues", "Jazz"}
 
