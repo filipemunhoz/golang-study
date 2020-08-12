@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 const (
+	_         = iota // first value ignored
 	a         = iota
 	b         = iota
 	c int     = iota
@@ -12,6 +13,17 @@ const (
 	g         = iota + 4.4 // untyped float
 	h         = iota + 5.5
 	i float64 = iota + 6.6
+)
+
+// Size int
+type Size int
+
+// Const
+const (
+	Small Size = iota
+	Medium
+	Big
+	Huge
 )
 
 func main() {
@@ -25,4 +37,11 @@ func main() {
 	fmt.Printf("%v - %T\n", g, g)
 	fmt.Printf("%v - %T\n", h, h)
 	fmt.Printf("%v - %T\n", i, i)
+
+	var s Size = Medium
+	fmt.Println("Size: ", s)
+}
+
+func (d Size) String() string {
+	return [...]string{"Small", "Medium", "Big", "Huge"}[d]
 }
