@@ -3,22 +3,25 @@ package main
 import "fmt"
 
 const (
-	_         = iota // first value ignored
-	a         = iota
-	b         = iota
-	c int     = iota
-	d         = iota + 10 // untyped int
-	e         = iota + 20
-	f         = iota + 30
-	g         = iota + 4.4 // untyped float
-	h         = iota + 5.5
-	i float64 = iota + 6.6
+	_     = iota // first value ignored
+	a     = iota
+	b     = iota
+	c int = iota
+	d     = iota + 10 // untyped int
+	e     = iota + 20
+	f     = iota + 30
+	g     = iota + 4.4 // untyped float
+	h     = iota + 5.5
 )
 
-// Size int
+const (
+	i float64 = iota // reseted iota
+)
+
+// Size int - using enum type
 type Size int
 
-// Const
+// Const for enum
 const (
 	Small Size = iota
 	Medium
